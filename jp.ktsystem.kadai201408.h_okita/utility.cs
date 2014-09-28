@@ -32,30 +32,6 @@ namespace jp.ktsystem.kadai201408.h_okita
             return File.Exists(filePath);
         }
 
-        ///// <summary>
-        ///// 文字列が半角英字のみかどうか調べる
-        ///// </summary>
-        ///// <param name="str">文字列</param>
-        ///// <returns>半角英字のみ：true、それ以外：false</returns>
-        //public static bool IsHalfWidtAlphabet(string str)
-        //{
-        //    if (string.IsNullOrEmpty(str))
-        //    {
-        //        return false;
-        //    }
-
-        //    foreach (char c in str)
-        //    {
-        //        if (!IsHalfWidthAlphabet(c))
-        //        {
-        //            //半角英数字およびコンマが含まれているとき
-        //            return false;
-        //        }
-        //    }
-
-        //    return true;
-        //}
-
         /// <summary>
         /// 文字が半角英字のみかどうか調べる
         /// </summary>
