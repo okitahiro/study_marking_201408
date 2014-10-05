@@ -199,7 +199,7 @@ namespace jp.ktsystem.kadai201408.h_okita
             {
                 foreach (MaxDataModel model in maxList)
                 {
-                    sr.WriteLine("[{0}]:[{1}]:[{2}]", model.N, model.DataStr, model.Data);
+                    sr.WriteLine("[{0}]:[{1}]:[{2}]", model.N, model.DataStr, model.DataScore);
                 }
             }
         }
@@ -227,11 +227,11 @@ namespace jp.ktsystem.kadai201408.h_okita
             /// <param name="n">データの出現位置</param>
             /// <param name="dataStr">データの内容</param>
             /// <param name="data">データの点数</param>
-            public MaxDataModel(int n, string dataStr, int data)
+            public MaxDataModel(int n, string dataStr, int dataScore)
             {
                 _n = n;
                 _dataStr = dataStr;
-                _data = data;
+                _dataScore = dataScore;
             }
 
             /// <summary>
@@ -261,14 +261,14 @@ namespace jp.ktsystem.kadai201408.h_okita
             /// <summary>
             /// データの点数
             /// </summary>
-            public string Data
+            public string DataScore
             {
                 get
                 {
-                    return _data.ToString();
+                    return _dataScore.ToString();
                 }
             }
-            private int _data;
+            private int _dataScore;
         }
     }
 }
