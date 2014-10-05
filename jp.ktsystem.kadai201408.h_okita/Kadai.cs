@@ -195,12 +195,19 @@ namespace jp.ktsystem.kadai201408.h_okita
         /// <param name="anOutputPath">出力ファイルパス</param>
         private static void OutputData(List<MaxDataModel> maxList, string anOutputPath)
         {
-            using (StreamWriter sr = new StreamWriter(anOutputPath, false, ENCODING))
+            try
             {
-                foreach (MaxDataModel model in maxList)
+                using (StreamWriter sr = new StreamWriter(anOutputPath, false, ENCODING))
                 {
-                    sr.WriteLine("[{0}]:[{1}]:[{2}]", model.N, model.DataStr, model.Data);
+                    foreach (MaxDataModel model in maxList)
+                    {
+                        sr.WriteLine("[{0}]:[{1}]:[{2}]", model.N, model.DataStr, model.Data);
+                    }
                 }
+            }
+            catch
+            {
+                throw new KadaiException(ErrorCode.FILE_IO_ERRER);
             }
         }
 
