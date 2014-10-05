@@ -32,5 +32,12 @@ namespace jp.ktsystem.kadai201408.h_okita
     /// <summary>
     /// エラーコードの列挙型
     /// </summary>
-    public enum ErrorCode { FILE_IO_ERRER, INVALID_DATA_STRING, OTHERS};
+    public enum ErrorCode {
+        /// <summary>1 : ファイルの入出力エラー</summary>
+        FILE_IO_ERRER,
+        /// <summary>2 : データ内部に半角英字以外の文字が存在した</summary>
+        INVALID_DATA_STRING,
+        /// <summary>3 : その他のエラー</summary>
+        OTHERS
+    }
 }
