@@ -10,7 +10,7 @@ namespace jp.ktsystem.kadai201408.h_okita
     /// <summary>
     /// ユーティリティークラス
     /// </summary>
-    public class Utility
+    public static class Utility
     {
         /// <summary>
         /// 文字列がnullまたは空文字かどうかチェックする
