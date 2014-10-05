@@ -122,7 +122,7 @@ namespace jp.ktsystem.kadai201408.h_okita
                     {
                         byte1 = fs1.ReadByte();
                         byte2 = fs2.ReadByte();
-                        if(byte1 != byte2)
+                        if (byte1 != byte2)
                         {
                             Assert.Fail();
                         }
