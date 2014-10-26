@@ -30,7 +30,7 @@ namespace jp.ktsystem.kadai201408.h_okita
             string aLine = ReadLine(anInputPath);
 
             //ファイルが空だった場合
-            if(Utility.IsNullOrEmpty(aLine))
+            if (Utility.IsNullOrEmpty(aLine))
             {
                 return 0;
             }
@@ -120,7 +120,7 @@ namespace jp.ktsystem.kadai201408.h_okita
             //ファイルが空だった場合
             if (Utility.IsNullOrEmpty(aLine))
             {
-                aLine =string.Empty;
+                aLine = string.Empty;
             }
 
             //最大点数リストの取得
@@ -223,7 +223,7 @@ namespace jp.ktsystem.kadai201408.h_okita
             return (int)c - (int)'A' + 1;
         }
 
-       
+
         /// <summary>
         /// 問2・最大値出力用データ情報モデル
         /// </summary>

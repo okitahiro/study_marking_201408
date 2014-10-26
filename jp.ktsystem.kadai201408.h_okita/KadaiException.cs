@@ -5,7 +5,7 @@ namespace jp.ktsystem.kadai201408.h_okita
     /// <summary>
     /// Kadai用例外クラス
     /// </summary>
-    public class KadaiException: Exception
+    public class KadaiException : Exception
     {
         /// <summary>
         /// コンストラクタ
@@ -37,4 +37,5 @@ namespace jp.ktsystem.kadai201408.h_okita
         INVALID_DATA_STRING = 2, 
         OTHERS = 3
     }
+    public enum ErrorCode { FILE_IO_ERRER, INVALID_DATA_STRING, OTHERS };
 }
