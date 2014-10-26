@@ -66,8 +66,8 @@ namespace jp.ktsystem.kadai201408.h_okita
         /// <returns>データの点数</returns>
         private static long GetTotalScore(string str)
         {
-            int n = 1;  //データの出現位置
-            int data = 0;    //データの点数
+            long n = 1;  //データの出現位置
+            long data = 0;    //データの点数
             long totalScore = 0; //データの点数の積の合計
             foreach (char c in str)
             {
@@ -89,6 +89,7 @@ namespace jp.ktsystem.kadai201408.h_okita
 
                 data += GetAlphabetScore(upperC);
             }
+            
             totalScore += data * n;
 
             return totalScore;
@@ -136,10 +137,10 @@ namespace jp.ktsystem.kadai201408.h_okita
         /// <returns>最大点数のリスト</returns>
         private static List<MaxDataModel> GetMaxData(string str)
         {
-            int n = 1;  //データの出現位置
+            long n = 1;  //データの出現位置
             StringBuilder sb = new StringBuilder();  //データの内容
-            int data = 0;    //データの点数
-            int maxData = 0;    //最大点数
+            long data = 0;    //データの点数
+            long maxData = 0;    //最大点数
             List<MaxDataModel> maxList = new List<MaxDataModel>();
             foreach (char c in str)
             {
@@ -234,7 +235,7 @@ namespace jp.ktsystem.kadai201408.h_okita
             /// <param name="n">データの出現位置</param>
             /// <param name="dataStr">データの内容</param>
             /// <param name="data">データの点数</param>
-            public MaxDataModel(int n, string dataStr, int data)
+            public MaxDataModel(long n, string dataStr, long data)
             {
                 _n = n;
                 _dataStr = dataStr;
@@ -251,7 +252,7 @@ namespace jp.ktsystem.kadai201408.h_okita
                     return _n.ToString();
                 }
             }
-            private int _n;
+            private long _n;
 
             /// <summary>
             /// データの内容
@@ -275,7 +276,7 @@ namespace jp.ktsystem.kadai201408.h_okita
                     return _data.ToString();
                 }
             }
-            private int _data;
+            private long _data;
         }
     }
 }
